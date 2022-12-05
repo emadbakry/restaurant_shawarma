@@ -1,0 +1,110 @@
+body {
+    background-color: #000;
+     font-family: 'Lemonada', El Messiri;
+}
+
+.logo a img{
+  max-width: 150px;
+}
+/* nab btns */
+.main_nav button {
+    font-size: 1.1rem;
+}
+
+.main_nav ul {
+    padding: 0;
+}
+.main_nav ul li {
+    position: relative;
+}
+.main_nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: #ffeb3b;
+    transform: translate(-50%,-50%);
+    height: 2px;
+    width: 0%;
+    max-width: 200px;
+    transition: 0.4s ease-in-out;
+}
+.main_nav ul li.active:after {
+  width: 100%;
+}
+#products {
+    display: none;
+    transition:All 0.3s;
+    opacity: 0;
+    /* transform: translateY(300px); */
+    animation: show_smooth ease 400ms forwards;
+}
+#products.active {
+    display: flex !important;
+}
+@keyframes show_smooth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#products.hide {
+    animation: hide_smooth ease 400ms forwards;
+}
+@keyframes hide_smooth {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.main_nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(25%,1fr));
+}
+
+@media only screen and (min-width:992px){
+    .main_nav ul li button {
+        font-size: 2rem;
+    }
+}
+.main h2 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+.product_wrapper {
+    margin-bottom: 2.3rem;
+}
+/* footer */
+footer {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+footer i {
+     font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition:All 0.3s;
+}
+footer i:hover {
+    opacity: 0.6;
+}
+footer .main_footer {
+    max-width: 400px;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+footer a:hover {
+    color: #ffeb3b;
+}
+footer .map iframe {
+    width: 100%;
+}

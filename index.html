@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Big+Shoulders+Display:wght@700&family=Cairo:wght@400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Epilogue:wght@400;500;600;700;800&family=Lemonada:wght@300;400;500;600;700&family=Lexend+Deca&family=Mada:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,700;1,400&family=Reem+Kufi:wght@400;600&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,400;1,700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body style="direction: rtl;">
+  <header class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <!-- <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <div class="logo w-100">
+    <a href="#" class="img-fluid d-flex justify-content-center">
+        <img class="img-fluid w-25" src="./assets/logo.png" alt="thisrestaurantname_logo">
+    </a>
+  </div>
+</header>
+<nav class="main_nav nav mb-5 mt-3 border-bottom sticky-top bg-black pt-2">
+    <div class="container">
+        <ul class="list-unstyled">
+         <li onclick="change_catag(this)" data-catag="shawarma" class="text-center  active"><button type="button"  class="btn text-light">شاورما</button></li>
+         <li onclick="change_catag(this)" data-catag="tamiya" class="text-center "><button type="button" class="btn text-light fs-sm-2 text">طعمية</button></li>
+         <li onclick="change_catag(this)" data-catag="flafil" class="text-center "><button type="button" class="btn text-light">فلافل</button></li>
+         <li onclick="change_catag(this)" data-catag="kebab" class="text-center "><button type="button" class="btn text-light">كباب</button></li>       
+        </ul>
+    </div>
+</nav>
+<section class="main">
+    <div class="container">
+        <!-- shawarma -->
+        <div class="row text-center shawarma active" id="products">
+            <div class="product_wrapper col-12 col-sm-4">
+                <figure>
+                    <img class="img-fluid" src="./assets/shawarma-1.png" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">صحن شاورما</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">19 ريال</p>
+            </div>
+            <div class="product_wrapper col-12 col-sm-4">
+                <figure>
+                    <img class="img-fluid" src="./assets/shawarma-photato.png" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">بطاطس بالشاورما</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">9 ريال</p>
+            </div>
+            <div class="product_wrapper col-12 col-sm-4">
+                <figure>
+                    <img class="img-fluid" src="./assets/shawarma-meat.png" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">شاورما باللحم</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">9 ريال</p>
+            </div>
+        </div>
+        <!-- tamiya -->
+        <div class="row text-center tamiya" id="products">
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/tamiya-1.jpeg" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">طعمية</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">5 ريال</p>
+            </div>
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/shawarma-1.png" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">صحن طعمية</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">7 ريال</p>
+            </div>
+        </div>
+        <!-- flafil -->
+        <div class="row text-center flafil" id="products">
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/flafil.jpeg" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">فلافل عربي</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">9 ريال</p>
+            </div>
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/flafil.jpeg" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">صحن فلافل عربي</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">14 ريال</p>
+            </div>
+        </div>
+        <!-- Kebab -->
+        <div class="row text-center kebab" id="products">
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/kebab.jpeg" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">صحن كباب</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">9 ريال</p>
+            </div>
+            <div class="product_wrapper col-12 col-sm-6">
+                <figure>
+                    <img class="img-fluid" src="./assets/kebab.jpeg" alt="شاورما">
+                    <fiurecaption>
+                        <h2 class="text-light">صحن كباب كبير</h2>
+                    </fiurecaption>
+                </figure>
+                <p class="text-light">13 ريال</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer mt-5 mb-5 d-flex flex-wrap">
+    <div class="container  w-100 d-flex justify-content-center">
+        <div class="main_footer row d-flex justify-content-center  w-100">
+            <div class="col-3 justify-content-center d-flex "><a href="#"><i class="fa-brands fa-facebook"></i> </a></div>
+            <div class="col-3 justify-content-center d-flex "><a href="#"><i class="fa-brands fa-twitter"></i>  </a></div>
+            <div class="col-3 justify-content-center d-flex "><a href="#"><i class="fa-brands fa-youtube"></i>  </a></div>
+            <div class="col-3 justify-content-center d-flex "><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+        </div>
+    </div>
+    <div class="container w-100 mb-4 mt-4 text-start">
+        <div class="contact_us d-md-flex justify-content-md-center">
+            <div class="phone mt-3 ms-4">
+                <a href="tel:05555555555">9665555555555+</a>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="mail mt-3 ms-4">
+                <a href="mailto:contact@shawarma.com">Shawarma@shawarma.com</a>
+                <i class="fa-solid fa-mail-bulk"></i>
+            </div>
+        </div>
+    </div>
+    <div class="ma">
+        <div class="container">
+            <iframe class="mb-4 mt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59372.045490061966!2d39.30839995827332!3d21.55651745825493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d3df92a41183%3A0xa63eb1b146e41750!2z2LTYp9mI2LHZhdinINi52KfZhNmFINin2YTYt9i52YU!5e0!3m2!1sar!2ssa!4v1670269859015!5m2!1sar!2ssa" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="text-center mb-5">اضغط على الخريطة</p>
+        </div>
+    </div>
+</footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
