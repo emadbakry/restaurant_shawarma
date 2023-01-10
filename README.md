@@ -7,6 +7,8 @@ This is a small page for a Shawarma meal restaurant!
 
 I made it for a client seen in Google Map.
 
+There are two languages: Ar + En
+
 I used:
 -bootstrap 5.2.3
 -Fontawesome 6.2
